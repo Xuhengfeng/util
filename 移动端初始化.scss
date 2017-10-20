@@ -1,0 +1,18 @@
+@charset "utf-8";
+*{
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+}
+html,body{
+     height:100%;
+     width:100%;
+     background:#fff;
+}
+a{
+     text-decoration:none !important;
+}
+$fontSize:23;   
+@function r($px){
+    @return $px/$fontSize+rem;
+}
