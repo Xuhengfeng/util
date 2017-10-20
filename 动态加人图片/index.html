@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#end {
+			width: 200px;
+			height: 200px;
+			background: red;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		
+		.u-flyer {
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			position: fixed;
+			z-index: 9999;
+		}
+	
+	</style>
+		<script src="jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+	<button onclick="setIco(event)">点击</button>
+	
+
+
+	<div id="end">购物车:</div>
+	<script>
+	var aBtn=document.querySelectorAll("button");
+	
+	// for(var i=0;i<aBtn.length;i++){
+	// 	aBtn[i].onclick=function(){
+	// 		addProduct(event);
+	// 	};
+	// }
+		function setIco(event) {
+
+            // 变量区,当前按钮,当前图片
+		
+				var flyer = $('<img class="u-flyer" src="1.png">');
+
+			
+            //鼠标在页面点击开始位置计算.
+			var top = $(window).scrollTop();
+			
+			var dh = event.pageY;
+
+			var newh = dh - top;
+
+
+			// 鼠标结束位置计算	
+			var oDiv = $('#end').offset();
+			var newdh = oDiv.top - top;
+
+			flyer.fly({
+				start: {
+					left: event.pageX,
+					top: newh
+				},
+				end: {
+					left: oDiv.left,
+					top: newdh,
+					width: 10,
+					height: 10
+				}
+			});
+		}
+	</script>
+
+	<script src="fly.js"></script>
+</body>
+
+</html>

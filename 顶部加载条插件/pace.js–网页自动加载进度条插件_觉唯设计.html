@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://www.jiawin.com/pace-js-automatic-page-load-progress-bar -->
+<html lang="zh-CN"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+        <meta name="keywords" content="css, javascript, 进度条, ">
+    <meta name="description" content="之前有很多同学询问觉唯网站顶部的页面加载进度条是怎么实现的，页面的加载进度百分比，有时候获取是比较麻烦的，当然也可以利用一些优秀的JavaScript插件来实现">
+    <meta name="author" content="Javin, www.jiawin.com">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+	    <title>
+	pace.js–网页自动加载进度条插件_觉唯设计    </title>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="http://www.jiawin.com/xmlrpc.php">
+         <!--[if lt IE 9]>
+    <script src="http://static.jiawin.com/wp-content/themes/jiawin/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="觉唯设计 » Feed" href="http://www.jiawin.com/feed">
+<link rel="alternate" type="application/rss+xml" title="觉唯设计 » 评论Feed" href="http://www.jiawin.com/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="觉唯设计 » pace.js – 网页自动加载进度条插件评论Feed" href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar/feed">
+<link rel="stylesheet" id="javin-font-css" href="./pace.js–网页自动加载进度条插件_觉唯设计_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="javin-style-css" href="./pace.js–网页自动加载进度条插件_觉唯设计_files/style.css" type="text/css" media="all">
+<script src="./pace.js–网页自动加载进度条插件_觉唯设计_files/push.js"></script><script type="text/javascript" async="" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm"></script><script type="text/javascript" async="" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm(1)"></script><script type="text/javascript" async="" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm(2)"></script><script type="text/javascript" async="" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm(3)"></script><script type="text/javascript" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/jquery.min.js"></script>
+<link rel="https://api.w.org/" href="http://www.jiawin.com/wp-json/">
+<link rel="prev" title="艺术家Tanaka Tatsuya的微距摄影日历" href="http://www.jiawin.com/tanaka-tatsuya-miniature-calendar">
+<link rel="next" title="Max Rive 河流摄影" href="http://www.jiawin.com/max-rive">
+<link rel="canonical" href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar">
+<link rel="shortlink" href="http://www.jiawin.com/?p=3928">
+<link rel="alternate" type="application/json+oembed" href="http://www.jiawin.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.jiawin.com%2Fpace-js-automatic-page-load-progress-bar">
+<link rel="alternate" type="text/xml+oembed" href="http://www.jiawin.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.jiawin.com%2Fpace-js-automatic-page-load-progress-bar&amp;format=xml">
+             <script type="text/javascript" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/m.js"></script>
+<script src="./pace.js–网页自动加载进度条插件_觉唯设计_files/share.js"></script><link rel="stylesheet" href="./pace.js–网页自动加载进度条插件_觉唯设计_files/share_style1_24.css"></head>
+<body><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+<header id="header" class="inside scroll min">
+  <div class="content">
+    <div class="nav" role="navigation">
+        <ul id="nav-menu" class="nav-menu">
+            <li class="nav-toggle">
+              <div id="toggle-icon" class="toggle-icon" aria-controls="#nav-list" aria-expanded="false">
+              <i class="fa fa-bars"></i>
+              </div>
+            </li>
+            <li class="signin-toggle">
+                                <a data-sign="0" id="signin-icon" class="user-signin" aria-controls="#sign" aria-expanded="false"><i class="fa fa-user"></i></a>
+                          </li>
+            <li class="home-logo"><a href="http://www.jiawin.com/"><span class="text-replace">觉唯设计</span></a></li>
+        </ul>
+                    <ul id="nav-list" class="nav-list">
+                <li id="logo"><a href="http://www.jiawin.com/"><span class="text-replace">觉唯设计</span></a></li>
+                <li class="current-post-ancestor"><a href="http://www.jiawin.com/topics/ued">文章</a></li>
+<li><a href="http://www.jiawin.com/topics/cool">欣赏</a></li>
+<li><a href="http://www.jiawin.com/topics/resource">素材</a></li>
+<li><a href="http://www.jiawin.com/store">兑换</a></li>
+<li><a href="http://www.jiawin.com/special">活动</a></li>
+<li><a target="_blank" href="http://www.jiawin.com/weiran">唯然</a></li>
+<li><a>更多</a>
+<ul class="sub-menu">
+	<li><a href="http://www.jiawin.com/about-us">关于觉唯</a></li>
+	<li><a href="http://www.jiawin.com/contact-us">留言联系</a></li>
+</ul>
+</li>
+                                <li id="login-reg">
+                    <div><a data-sign="0" id="user-signin" class="user-signin">登录</a></div>
+                    <div><a data-sign="1" id="user-reg" class="user-reg">注册</a></div>
+                </li>
+                                <li id="search" role="search">
+                    <form method="get" id="searchform" action="http://www.jiawin.com/">
+                       <div class="search-input-wrapper">
+                        <span class="search-icon"><i class="fa fa-search"></i></span>
+                        <input type="hidden" name="genre" value="">
+                        <input type="search" class="search-input" name="s" id="search-input" value="" placeholder="输入关键词搜索..." autocomplete="off">
+                        <button type="submit" class="search-submit" id="search-submit" disabled="disabled"></button>
+                       </div>
+                   </form>
+                </li>
+            </ul>
+            </div>
+  </div>
+</header>
+<div id="container" class="container">                <div class="content single">
+                         <div class="recommend">
+                <div style="height:90px;overflow: hidden;">
+<!-- 广告位：post-top -->
+<script type="text/javascript">BAIDU_CLB_fillSlot("1017163");</script><div id="BAIDU_SSP__wrapper_1017163_0"></div><script charset="utf-8" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm(4)"></script><script type="text/javascript">
+var cpro_id="u1978145";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"1260",rsi1:"90",pat:"6",tn:"baiduCustNativeAD",rss1:"#f1f1f1",conBW:"0",adp:"2",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"",rss2:"#000000",titSU:"0",ptbg:"70",piw:"0",pih:"0",ptp:"1"}
+</script>
+<script src="./pace.js–网页自动加载进度条插件_觉唯设计_files/c.js" type="text/javascript"></script><div id="BAIDU_SSP__wrapper_u1978145_0"><iframe id="iframeu1978145_0" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm.html" width="1260" height="90" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div>
+</div>               </div>
+                    <div id="primary" class="primary" role="main">
+            <div class="area">
+            <article id="post-3928">
+	<header class="single-header">
+        <div class="single-meta">
+           <div class="author-avatar">
+           <a target="_blank" href="http://www.jiawin.com/user/1" title=" Javin zhong 的主页" rel="author">
+           <img src="./pace.js–网页自动加载进度条插件_觉唯设计_files/0914195143b0c2b1af6e90f-100x100.png" class="avatar" alt="Javin zhong" "="" width="70" height="70">  
+           </a>
+           </div>
+           <h1 class="title">pace.js – 网页自动加载进度条插件</h1>            <p class="info">
+                            <span class="cat-links">
+              分类栏目：<a href="http://www.jiawin.com/topics/ued">用户体验</a> - 			  <a href="http://www.jiawin.com/topics/ued/web-developer" rel="category tag">前端开发</a>              </span>
+                          </p>
+            <p class="copyright"><span>版权信息：</span><a class="url" href="http://www.jiawin.com/user/1" rel="author">Javin zhong</a> 原创作品、版权所有，禁止匿名转载，分享请注明版权。</p>
+        </div>
+		<div class="data-meta">
+            <p class="badge-num">37372</p>
+            <p>
+            <span class="author"><a target="_blank" href="http://www.jiawin.com/user/1" title="查看 Javin zhong 发表的全部文章" rel="author"> Javin zhong </a> 发布于 <time class="data-time">2014-09-28</time></span>
+            						<span class="comments-link"><a href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar#comments">31条评论</a></span>
+			            </p>
+		</div>
+	</header>
+	<div class="single-content-wrapper">
+		<div class="single-content">
+			<p>之前有很多同学询问觉唯网站顶部的页面加载进度条是怎么实现的，页面的加载进度百分比，有时候获取是比较麻烦的，当然也可以利用一些优秀的JavaScript插件来实现，今天就为大家介绍这样子的一款插件：<code>pace.js</code>。</p>
+<p style="text-align: center;"><img class="alignnone size-full wp-image-3934" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/28114312c5ef0dc4c1f6158.jpg" alt="pace js 缩略图" width="600" height="302" srcset="http://static.jiawin.com/uploads/2014/09/28114312c5ef0dc4c1f6158.jpg 600w, http://static.jiawin.com/uploads/2014/09/28114312c5ef0dc4c1f6158-250x125.jpg 250w" sizes="(max-width: 600px) 100vw, 600px"></p>
+<p>在页面中引入Pace.js，页面就会自动监测你的请求（包括Ajax请求），在事件循环滞后，会在页面记录加载的状态以及进度情况。此插件的兼容性很好，可以兼容IE8以上的所有主流插件，而且其强大之处在于，你还可以引入加载进度条的主题样式，你可以选择任意颜色和多种动画效果（例如简约、闪光灯，MAC OSX，左侧填充，顶部填充，计数器和弹跳等等动画效果），如果你擅长修改css动画，那你就可以做出无限种可能性的动画，为你的网站增添个性化特色！</p>
+<p style="text-align: center;"><a class="short-btn demos" href="http://github.hubspot.com/pace/docs/welcome/" rel="external nofollow" target="_blank"><i class="fa fa-external-link"></i>查看官网</a><a class="short-btn download" href="https://github.com/HubSpot/PACE/archive/v0.5.6.zip" rel="external nofollow" target="_blank"><i class="fa fa-cloud-download"></i>下载附件</a></p>
+<h3>使用方法</h3>
+<p>引入Pace.js以及主题文件即可：</p>
+<pre>&lt;head&gt;
+  &lt;script src="/pace/pace.js"&gt;&lt;/script&gt;
+  &lt;link href="/pace/themes/pace-theme-barber-shop.css" rel="external nofollow"  rel="stylesheet" /&gt;
+&lt;/head&gt;
+</pre>
+<h3>自定义配置</h3>
+<p>Pace.js会自动加载到页面中，不需要挂接到任何代码，会自动检测进度。如果你想做一些调整，你可以设置<code>window.paceOptions</code>来自定义配置：</p>
+<pre>  paceOptions = {
+  // Disable the 'elements' source
+  elements: false,
+  
+  // Only show the progress on regular and ajax-y page navigation,
+  // not every request
+  restartOnRequestAfter: false
+  }
+</pre>
+<p>你也可以将自定义设置放到<code>script</code>标签内，例如：</p>
+<pre>&lt;script data-pace-options='{ "ajax": false }' src='pace.js'&gt;&lt;/script&gt;
+</pre>
+<p>如果你使用<code>AMD</code>或者<code>Browserify</code>来加载模块的话，你可以通过这样子来设置（例如：<code>start</code>）：</p>
+<pre>define(['pace'], function(pace){
+  pace.start({
+    document: false
+  });
+});
+</pre>
+<h3>使用API</h3>
+<p>Pace.js公开的API列表：</p>
+<ul>
+<li><strong>Pace.start</strong>：开始显示进度条，如果你不是使用<code>AMD</code>或者<code>Browserify</code>来加载模块的话，这个会默认执行。</li>
+<li><strong>Pace.restart</strong>：进度条重新加载以及显示。</li>
+<li><strong>Pace.stop</strong>：隐藏进度条以及停止加载。</li>
+<li><strong>Pace.track</strong>：监测一个或者多个请求任务。</li>
+<li><strong>Pace.ignore</strong>：忽略一个或者多个请求任务。</li>
+</ul>
+<h3>官网演示下载</h3>
+<p>基本上大致使用方法就这些，还有其他的一些方法的使用，各位就前往到官网去查看更加详细的介绍。希望这个插件可以帮助到大家！</p>
+<p style="text-align: center;"><a class="short-btn demos" href="http://github.hubspot.com/pace/docs/welcome/" rel="external nofollow" target="_blank"><i class="fa fa-external-link"></i>查看官网</a><a class="short-btn download" href="https://github.com/HubSpot/PACE/archive/v0.5.6.zip" rel="external nofollow" target="_blank"><i class="fa fa-cloud-download"></i>下载附件</a></p>
+	        		</div>
+	</div>
+    <footer class="single-footer">
+      <div class="single-heart"><a class="user-signin"><i class="fa fa-heart"></i><span class="heart-text">喜欢</span> ( <span class="heart-no">93</span> )</a><div class="loading-line"></div></div>
+      <div class="tag-share">
+		  <div class="tag-links"><span><i class="fa fa-tags"></i>标签</span><a href="http://www.jiawin.com/tag/css" rel="tag">css</a><a href="http://www.jiawin.com/tag/js" rel="tag">javascript</a><a href="http://www.jiawin.com/tag/%e8%bf%9b%e5%ba%a6%e6%9d%a1" rel="tag">进度条</a></div>          <div class="share">
+            <div class="bdsharebuttonbox bdshare-button-style1-24" data-bd-bind="1466687838639">
+            <a href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+            <a href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+            <a href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            </div>
+          </div>
+      </div>
+      	<nav class="navigation post-navigation" role="navigation">
+		<div class="nav-links">
+											                <a class="pre-post" title="艺术家Tanaka Tatsuya的微距摄影日历" rel="prev" href="http://www.jiawin.com/tanaka-tatsuya-miniature-calendar"><i class="fa fa-arrow-circle-left"></i>上一篇：艺术家Tanaka Tatsuya的微距摄影日历</a>
+                 
+                                <a class="next-post" title="Max Rive 河流摄影" rel="next" href="http://www.jiawin.com/max-rive">下一篇：Max Rive 河流摄影<i class="fa fa-arrow-circle-right"></i></a>
+                 
+					</div>
+	</nav>
+	    </footer>
+</article>
+            </div>
+            <div class="area">
+               <div class="related-posts">
+<h2 class="title">相关推荐</h2>
+<ul>
+			<li>
+            <div class="item">
+            <div class="thumb">
+                <a href="http://www.jiawin.com/css-figure-purchase" title="创意CSS技巧：看图购">
+                				  				  <img width="280" height="180" alt="创意CSS技巧：看图购" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/10020163314b2ab67b.jpg" srcset="http://static.jiawin.com/uploads/2012/09/10020163314b2ab67b.jpg?imageMogr2/thumbnail/!560x360r/gravity/Center/crop/560x360/dx/0/dy/0 2x">                                </a>
+            </div>
+            <a class="post-title" rel="bookmark" href="http://www.jiawin.com/css-figure-purchase" title="创意CSS技巧：看图购">创意CSS技巧：看图购</a>
+            </div>
+            </li>
+					<li>
+            <div class="item">
+            <div class="thumb">
+                <a href="http://www.jiawin.com/pressable-css-buttons" title="Pressable CSS Buttons – 多种颜色和形状的CSS按钮">
+                				  				  <img width="280" height="180" alt="Pressable CSS Buttons – 多种颜色和形状的CSS按钮" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/Pressable-CSS-Buttons.jpg" srcset="http://static.jiawin.com/uploads/2013/01/Pressable-CSS-Buttons.jpg?imageMogr2/thumbnail/!560x360r/gravity/Center/crop/560x360/dx/0/dy/0 2x">                                </a>
+            </div>
+            <a class="post-title" rel="bookmark" href="http://www.jiawin.com/pressable-css-buttons" title="Pressable CSS Buttons – 多种颜色和形状的CSS按钮">Pressable CSS Buttons – 多种颜色和形状的CSS按钮</a>
+            </div>
+            </li>
+					<li>
+            <div class="item">
+            <div class="thumb">
+                <a href="http://www.jiawin.com/3d-flip-round-slide" title="3D多角度翻转圆形幻灯片">
+                				  				  <img width="280" height="180" alt="3D多角度翻转圆形幻灯片" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/3d-flip-round-slide.jpg" srcset="http://static.jiawin.com/uploads/2013/01/3d-flip-round-slide.jpg?imageMogr2/thumbnail/!560x360r/gravity/Center/crop/560x360/dx/0/dy/0 2x">                                </a>
+            </div>
+            <a class="post-title" rel="bookmark" href="http://www.jiawin.com/3d-flip-round-slide" title="3D多角度翻转圆形幻灯片">3D多角度翻转圆形幻灯片</a>
+            </div>
+            </li>
+					<li>
+            <div class="item">
+            <div class="thumb">
+                <a href="http://www.jiawin.com/swipe-mobile-touch-slider" title="Swipe JS – 移动WEB页面内容触摸滑动类库">
+                				  				  <img width="280" height="180" alt="Swipe JS – 移动WEB页面内容触摸滑动类库" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/0309283625b2916b5c49db6.jpg" srcset="http://static.jiawin.com/uploads/2013/08/0309283625b2916b5c49db6.jpg?imageMogr2/thumbnail/!560x360r/gravity/Center/crop/560x360/dx/0/dy/0 2x">                                </a>
+            </div>
+            <a class="post-title" rel="bookmark" href="http://www.jiawin.com/swipe-mobile-touch-slider" title="Swipe JS – 移动WEB页面内容触摸滑动类库">Swipe JS – 移动WEB页面内容触摸滑动类库</a>
+            </div>
+            </li>
+		</ul>
+</div>            </div>
+            <div class="area">
+            
+<div id="comments" class="comments">
+        				<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar#respond" style="display:none;">取消回复</a></small></h3><p class="must-log-in">登录之后才能评论，请点击 <a class="user-signin" data-sign="0" href="http://www.jiawin.com/wp-login.php?redirect_to=http%3A%2F%2Fwww.jiawin.com%2Fpace-js-automatic-page-load-progress-bar">登录</a>。</p>		</div><!-- #respond -->
+		            <h2 class="comments-title">
+            全部评论 / <strong>31</strong>        </h2>    
+        <ol class="comment-list">
+            	<li class="comment byuser comment-author-wodesmkj even thread-even depth-1" id="comment-89260">
+		<div id="div-comment-89260" class="comment-body">
+		<div class="comment-author vcard">
+	        <a target="_blank" title="前往的 wodesmkj 主页" href="http://www.jiawin.com/user/843"><img src="./pace.js–网页自动加载进度条插件_觉唯设计_files/836d7511406aa1f8c677886bccd7761c" class="avatar" alt="wodesmkj" "="" width="44" height="44"></a>		</div>
+    <div class="comment-main">
+        <p>原来淘宝的下一页也在用这个插件呀，用的是flash这个效果</p>
+        <div class="comment-meta">
+                        <span class="author"><cite>wodesmkj</cite></span>
+            <span class="date">                
+            2014-09-28            </span>
+                          <span class="reply user-signin" data-sign="0">
+                        			<a rel="nofollow" class="comment-reply-login" href="http://www.jiawin.com/wp-login.php?redirect_to=http%3A%2F%2Fwww.jiawin.com%2Fpace-js-automatic-page-load-progress-bar">登录以回复</a>            </span>		</div>
+            </div>
+    <div class="comment-floor">20		</div>
+	</div></li><!-- #comment-## -->
+        </ol>
+                <div class="centralnav">
+        <nav id="comment-nav" class="navigation comment-navigation" role="navigation">
+            <a class="prev page-numbers" href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar/comment-page-1#comments"><i class="fa fa-chevron-left"></i></a>
+<a class="page-numbers" href="http://www.jiawin.com/pace-js-automatic-page-load-progress-bar/comment-page-1#comments">1</a>
+<span class="page-numbers current">2</span>        </nav>
+        </div>
+        	</div>
+            </div>
+          </div>
+                         <div class="recommend">
+                <div style="height:90px;overflow: hidden;">
+<!-- 广告位：post-bottom -->
+<script type="text/javascript">BAIDU_CLB_fillSlot("1017172");</script><div id="BAIDU_SSP__wrapper_1017172_0"></div><script charset="utf-8" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm(5)"></script><div style="float:left;width:250px;">
+<script type="text/javascript">
+    /*250*90*/
+    var cpro_id = "u2513338";
+</script>
+<script src="./pace.js–网页自动加载进度条插件_觉唯设计_files/c.js" type="text/javascript"></script><div id="BAIDU_SSP__wrapper_u2513338_0"><iframe id="iframeu2513338_0" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm(6).html" width="250" height="90" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div>
+</div>
+<div style="float:left;width:760px;">
+<script type="text/javascript">
+    /*760*90*/
+    var cpro_id = "u2375989";
+</script>
+<script src="./pace.js–网页自动加载进度条插件_觉唯设计_files/c.js" type="text/javascript"></script><div id="BAIDU_SSP__wrapper_u2375989_0"><iframe id="iframeu2375989_0" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm(7).html" width="760" height="90" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div>
+
+</div>
+<div style="float:left;width:250px;">
+<script type="text/javascript">
+    /*250*90*/
+    var cpro_id = "u2513338";
+</script>
+<script src="./pace.js–网页自动加载进度条插件_觉唯设计_files/c.js" type="text/javascript"></script><div id="BAIDU_SSP__wrapper_u2513338_1"><iframe id="iframeu2513338_1" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ycmm(8).html" width="250" height="90" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div>
+</div>
+</div>               </div>
+                  </div>
+        </div><footer id="footer">
+  <div class="content">
+            <nav class="inner">
+          <aside id="describe" class="group">
+            <h3>觉唯</h3>
+            <p class="describe-text">以用户为中心的设计理念，专注于用户体验设计，拥有国内外最新的设计潮流趋势、独特而美的创意视觉、新颖而灵敏的思维意识、极致而生动的交互体验，更有严谨而通俗的技术教程！</p>
+            <p>唯然是觉唯网的图片分享社区，以记录美丽、分享美好的创意理念，分享高品质创意、艺术、设计、时尚、插画、摄影、唯美类精美图片。</p>
+            <p class="stamp"></p>
+          </aside>
+                         <aside class="group"><h3 class="title">关于</h3><div class="menu-about-container"><ul id="menu-about" class="menu"><li><a href="http://www.jiawin.com/about-us">关于觉唯</a></li>
+<li><a href="http://www.jiawin.com/contact-us">留言联系</a></li>
+<li><a href="http://www.jiawin.com/links">友情链接</a></li>
+<li><a href="http://www.jiawin.com/copyright">免责声明</a></li>
+<li><a href="http://www.jiawin.com/sitemap">网站地图</a></li>
+</ul></div></aside><aside class="group"><h3 class="title">栏目</h3><div class="menu-category-container"><ul id="menu-category" class="menu"><li class="current-post-ancestor"><a href="http://www.jiawin.com/topics/ued">用户体验</a></li>
+<li><a href="http://www.jiawin.com/topics/resource">素材下载</a></li>
+<li><a href="http://www.jiawin.com/topics/cool">设计欣赏</a></li>
+<li><a href="http://www.jiawin.com/store">主题商店</a></li>
+<li><a href="http://www.jiawin.com/weiran">唯然灵感</a></li>
+</ul></div></aside><aside class="group"><h3 class="title">友链</h3><div class="menu-links-container"><ul id="menu-links" class="menu"><li><a target="_blank" href="http://www.qianduan.net/">前端观察</a></li>
+<li><a target="_blank" href="http://qqread.qq.com/">手Q阅读中心</a></li>
+<li><a target="_blank" href="http://frozenui.github.io/">FrozenUI</a></li>
+<li><a target="_blank" href="http://www.shejidaren.com/">设计达人</a></li>
+<li><a target="_blank" href="http://www.maka.im/">MAKA</a></li>
+</ul></div></aside>    <aside id="social" class="group">
+    <h3 class="title">关注</h3>
+
+      <ul>
+                <li>Email: <a href="mailto:javin@jiawin.com">javin@jiawin.com</a></li>
+        <li class="social-email">
+          <form action="http://list.qq.com/cgi-bin/qf_compose_send" target="_blank" method="post">
+              <input type="hidden" name="t" value="qf_booked_feedback">
+              <input type="hidden" name="id" value="631d10588b9c4960800e97a7cb76cbe6640b25450ebdc87f">
+              <div class="social-email">
+                <input class="email" id="to" name="to" type="email" placeholder="请输入您的邮箱" required="">
+                <input class="submit" type="submit" value="订阅">
+              </div>
+          </form>
+         </li>
+         <li class="social-icon">
+            <a class="social-sina" rel="external nofollow" target="_blank" href="http://weibo.com/javinblog"><i class="fa fa-weibo"></i><span class="text-replace">关注新浪微博</span></a>            <a class="social-qqwb" rel="external nofollow" target="_blank" href="http://t.qq.com/jiawin-com"><i class="fa fa-tencent-weibo"></i><span class="text-replace">关注腾讯微博</span></a>                                                                        <a class="social-qq" rel="external nofollow" target="_blank" href="http://sighttp.qq.com/authd?IDKEY=efa0a34058fe927553ed27a6b55d34806e03f0889e67827b"><i class="fa fa-qq"></i><span class="text-replace">QQ在线联系</span></a>            <a class="social-rss" rel="external nofollow" target="_blank" href="http://www.jiawin.com/feed/"><i class="fa fa-rss"></i><span class="text-replace">rss</span></a>            <a id="social-weixin" data-pop="weixin" class="social-weixin"><i class="fa fa-weixin"></i><span class="text-replace">微信</span></a>        </li>
+      </ul>
+    </aside>
+    <div id="weixin" class="popupbox weixin-box"><div class="weixin-header">觉唯官方微信二维码<a class="popup-close weixin-close">×</a></div><div class="weixin-content"><span class="weixin-tip">打开微信，点击右上角的“魔法棒”，选择“扫一扫”功能，对准下方二维码即可。</span><img src="./pace.js–网页自动加载进度条插件_觉唯设计_files/jiawin_weixin.jpg"></div></div>                  </nav>
+        <section class="site-info">
+          <p class="copyright">Copyright © 2012-2016 <a href="http://www.jiawin.com/">觉唯设计</a> Theme by <a rel="author" href="http://www.jiawin.com/user/1">Javin zhong</a> All All Rights Reserved. 粤ICP备12073831号-1</p>
+       </section>
+      </div>
+</footer>
+<div id="sign">
+    <div class="part loginPart">
+    <form id="login" action="http://www.jiawin.com/login" method="post" novalidate="novalidate">
+        <div id="register-active" class="switch"><i class="fa fa-toggle-on"></i>切换注册</div>
+        <h3>登录<p class="status"></p></h3>
+        <p>
+            <label class="icon" for="username"><i class="fa fa-user"></i></label>
+            <input class="input-control" id="username" type="text" placeholder="请输入用户名或邮箱" name="username" required="" aria-required="true">
+        </p>
+        <p>
+            <label class="icon" for="password"><i class="fa fa-lock"></i></label>
+            <input class="input-control" id="password" type="password" placeholder="请输入密码" name="password" required="" aria-required="true">
+        </p>
+        <p class="safe">
+            <label class="remembermetext" for="rememberme"><input name="rememberme" type="checkbox" checked="checked" id="rememberme" class="rememberme" value="forever">记住我的登录</label>
+            <a class="lost" href="http://www.jiawin.com/wp-login.php?action=lostpassword">忘记密码？</a>
+        </p>
+        <p>
+            <input class="submit" type="submit" value="登录" name="submit">
+        </p>
+        <a class="close"><i class="fa fa-times"></i></a>
+        <input type="hidden" id="security" name="security" value="f38cad4773"><input type="hidden" name="_wp_http_referer" value="/pace-js-automatic-page-load-progress-bar">    </form>
+    <div class="other-sign">
+      <p>您也可以使用第三方帐号登录</p>
+      <div><a rel="nofollow" class="qqlogin" href="http://www.jiawin.com/oauth/qq"><i class="fa fa-qq"></i>QQ帐号登录</a></div>
+    </div>
+    </div>
+    <div class="part registerPart">
+    <form id="register" action="http://www.jiawin.com/register" method="post" novalidate="novalidate">
+        <div id="login-active" class="switch"><i class="fa fa-toggle-off"></i>切换登录</div>
+        <h3>注册<p class="status"></p></h3>    
+        <p>
+            <label class="icon" for="user_name"><i class="fa fa-user"></i></label>
+            <input class="input-control" id="user_name" type="text" name="user_name" placeholder="输入英文用户名" required="" aria-required="true">
+        </p>
+        <p>
+            <label class="icon" for="user_email"><i class="fa fa-envelope"></i></label>
+            <input class="input-control" id="user_email" type="text" name="user_email" placeholder="输入常用邮箱" required="" aria-required="true">
+        </p>
+        <p>
+            <label class="icon" for="user_pass"><i class="fa fa-lock"></i></label>
+            <input class="input-control" id="user_pass" type="password" name="user_pass" placeholder="密码最小长度为6" required="" aria-required="true">
+        </p>
+        <p>
+            <label class="icon" for="user_pass2"><i class="fa fa-retweet"></i></label>
+            <input class="input-control" type="password" id="user_pass2" name="user_pass2" placeholder="再次输入密码" required="" aria-required="true">
+        </p>
+        <p>
+            <input class="submit" type="submit" value="注册" name="submit">
+        </p>
+        <a class="close"><i class="fa fa-times"></i></a>  
+        <input type="hidden" id="user_security" name="user_security" value="fe97b9309b"><input type="hidden" name="_wp_http_referer" value="/pace-js-automatic-page-load-progress-bar"> 
+    </form>
+    <div class="other-sign">
+      <p>您也可以使用第三方帐号快捷注册</p>
+      <div><a rel="nofollow" class="qqlogin" href="http://www.jiawin.com/oauth/qq"><i class="fa fa-qq"></i>QQ一键注册</a></div>
+    </div>
+    </div>
+</div>
+<div id="suspend" class="show">
+  <a id="backtop"><i class="fa fa-angle-up"></i></a>
+</div>
+<script type="text/javascript" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/functions.min.js"></script>
+<script type="text/javascript" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ajax-comments.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_sign_object = {"ajaxurl":"http:\/\/www.jiawin.com\/wp-admin\/admin-ajax.php","redirecturl":"http:\/\/www.jiawin.com\/pace-js-automatic-page-load-progress-bar","loadingmessage":"\u6b63\u5728\u8bf7\u6c42\u4e2d\uff0c\u8bf7\u7a0d\u7b49..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/ajax-sign-script.min.js"></script>
+<script type="text/javascript" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/jquery.cookie.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var love_it_vars = {"ajaxurl":"http:\/\/www.jiawin.com\/wp-admin\/admin-ajax.php","nonce":"cdca947b73","already_loved_message":"\u8fd9\u4e2a\u5df2\u7ecf\u559c\u6b22\u4e86\uff0c\u65e0\u9700\u518d\u6b21\u642d\u8baa","error_message":"\u62b1\u6b49\uff0c\u5bf9\u4e8e\u4f60\u7684\u8bf7\u6c42\u597d\u50cf\u6709\u70b9\u95ee\u9898\uff0c\u8bf7\u7a0d\u5019\u518d\u8bd5"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/loveit.min.js"></script>
+<script type="text/javascript" src="./pace.js–网页自动加载进度条插件_觉唯设计_files/wp-embed.min.js"></script>
+<script>
+window._bd_share_config={
+	"common":{
+		"bdSnsKey":{"tsina":"1865653506"},
+		"bdText":"pace.js &#8211; 网页自动加载进度条插件",
+		"bdMini":"2",
+		"bdMiniList":false,
+		"bdPic":"http://static.jiawin.com/uploads/2014/09/28114312c5ef0dc4c1f6158.jpg||",
+		"bdStyle":"1",
+		"bdSize":"24"
+	},
+	"share":{
+	}
+};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3e31620eb0a4e69c61c07f5f76cc46c8' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./pace.js–网页自动加载进度条插件_觉唯设计_files/h.js" type="text/javascript"></script>
+
+</body></html>

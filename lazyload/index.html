@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="./lazyload.js"></script>
+</head>
+<body>
+	<img class="lazy" src="images/loading.gif" data-original="./images/01.jpg"width="100%" alt="" />
+	<img class="lazy" src="images/loading.gif" data-original="./images/02.jpg"width="100%" alt="" />
+	<img class="lazy" src="images/loading.gif" data-original="./images/03.jpg"width="100%" alt="" />
+	<img class="lazy" src="images/loading.gif" data-original="./images/04.jpg"width="100%" alt="" />
+	
+	<script>
+			$(function(){
+						// $(".lazy").lazyload();
+
+						$("img.lazy").lazyload({ threshold : 200 }); // 设置灵敏度 距离屏幕多少加载图片.  200单位是像素
+						// 
+						// $("img").lazyload({placeholder : "img/grey.gif", event : "click"});  // 事件触发
+						// 
+						// $("img").lazyload({ effect : "fadeIn"});   //动画效果
+
+
+ 					/*	$(function() {          
+   							 $("img").lazyload({
+       						 event : "sporty"
+   									 });
+								});	
+
+							$(window).bind("load", function() { 
+							    var timeout = setTimeout(function() {$("img").trigger("sporty")}, 5000);
+							});
+							*/
+
+							// 注意这个插件是基于jquery的插件,在应用插件之前,先引用 jquery
+
+		})
+	</script>
+</body>
+</html>

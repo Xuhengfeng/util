@@ -1,0 +1,6 @@
+优化pc端,click事件,适应pc,移动端
+
+scritp标签里面 第一行粘上就行
+
+
+ FastClick.attach(document.body);
